@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Huddle landing page</title>
+  </head>
+  <style>
+
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+  
+ 
+  :root {
+    --pink: hsl(322, 100%, 66%);
+    --pinkish: hsl(322, 37%, 64%);
+    --very_pale_cyan: hsl(193, 100%, 96%);
+    --very_dark_cyan: hsl(192, 100%, 9%);
+    --grayish_blue: hsl(208, 11%, 55%);
+    --white: #fff;
+  }
+  
+  body {
+  
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    font-size: 1.15em;
+    color: var(--very_dark_cyan);
+  }
+  
+  h1,
+  h2 {
+    font-family: "Poppins", sans-serif;
+  }
+  img {
+    max-width: 100%;
+  }
+  p {
+    opacity: 0.6;
+  }
+  .container {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 1000px;
+    max-width: 100%;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .btn {
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 15px 60px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--pinkish);
+  }
+  
+  .btn-primary {
+    background-color: var(--pink);
+    color: var(--white);
+  }
+  header {
+    background-image: url("bg-hero-desktop.svg");
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--very_pale_cyan);
+    padding: 40px 0;
+  }
+  
+  .flex {
+    display: flex;
+   
+    align-items: center;
+  }
+  
+  .flex > div,
+  .flex > ul {
+    flex: 1;
+  }
+  
+  .align-start {
+    align-items: flex-start;
+    gap: 30px;
+  }
+  nav {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  nav .flex {
+    flex-direction: row;
+  }
+  
+  .header-img {
+    margin-left: 20%;
+    width: 80%;
+  }
+  
+  .box {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: 40px 0;
+    padding: 60px;
+  }
+  
+  .box img {
+    width: 80%;
+  }
+  
+  .small-box {
+    display: inline-block;
+    margin-bottom: -50%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  footer {
+    background-color: var(--very_dark_cyan);
+    color: var(--white);
+    padding: 180px 0 60px;
+    font-size: 13px;
+  }
+  
+  footer ul {
+    list-style-type: none;
+  }
+  
+  footer ul li {
+    margin-bottom: 20px;
+  }
+  
+  footer .soial-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .circle {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+  
+    justify-content: center;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+  
+    text-decoration: none;
+  }
+  
+  footer .circle:hover {
+    background-color: var(--pinkish);
+  }
+  
+  .about:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .about_1:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .about_2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .logo_white {
+    width: 15%;
+    margin-bottom: 20px;
+  }
+  footer p {
+    text-align: right;
+  }
+  
+  .copy {
+    text-align: right;
+  }
+  .icons {
+    margin-left: 0px;
+  }
+  
+  .attribution {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+  .attribution a:hover {
+    color: hsla(27, 80%, 46%, 0.719);
+  }
+  
+ 
+  
+  @media screen and (max-width: 768px) {
+    body {
+      text-align: center;
+    }
+  
+    .flex {
+      flex-direction: column;
+    }
+    .header-img {
+      margin-top: 48px;
+      margin-left: 0;
+      width: 100%;
+    }
+    nav.flex {
+      flex-direction: row;
+    }
+    .box-reverse-mobile {
+      flex-direction: column-reverse;
+    }
+  
+    footer ul {
+      padding: 0;
+      width: 100%;
+    }
+    footer p {
+      text-align: center;
+    }
+    .huddle {
+      width: 35%;
+    }
+  
+    .btn_free {
+      padding: 15px 45px;
+    }
+  
+    .build_h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  
+    .build_p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  
+    .ready {
+      font-size: 20px;
+    }
+  
+    .btn-big {
+      padding: 15px 30px;
+      margin-top: 20px;
+    }
+  
+    .attribution {
+      font-size: 18px;
+    }
+  }
+  </style>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="flex">
+          <img src="logo.svg" class="huddle" alt="Huddle_logo" />
+          <button class="btn btn_free">Try It Free</button>
+        </nav>
+        <div class="flex">
+          <div>
+            <h1 class="build_h2">Build The Community Your Fans Will Love</h1>
+            <p class="build_p">
+              Huddle re-imagines the way we build communities. You have a voice,
+              but so does your audience. Create connections with your users as
+              you engage in genuine discussion.
+            </p>
+            <button class="btn btn-primary">Get Started For Free</button>
+          </div>
+
+          <div>
+            <img
+              class="header-img"
+              src="illustration-mockups.svg"
+              alt="mockup"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="box flex">
+          <div>
+            <h2>Grow Together</h2>
+            <p>
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+          <div>
+            <img src="illustration-grow-together.svg" alt="together" />
+          </div>
+        </div>
+
+        <div class="box flex box-reverse-mobile">
+          <div>
+            <img
+              src="illustration-flowing-conversation.svg"
+              alt="flowing-conversation"
+            />
+          </div>
+          <div>
+            <h2>Flowing Conversations</h2>
+            <p>
+              You wouldn't paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
+        </div>
+
+        <div class="box flex">
+          <div>
+            <h2>Your Users</h2>
+            <p>
+              This means, once signed in to your app, your users can start
+              chatting immediately.It takes no time at all to integrate Huddle
+              with your app's authentication solution.
+            </p>
+          </div>
+          <div>
+            <img
+              src="illustration-your-users.svg"
+              alt="illustration-your-users"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="container center">
+      <div class="box small-box">
+        <h2 class="ready">Ready To Build Your Community?</h2>
+        <button class="btn btn-primary btn-big">Get Started For Free</button>
+      </div>
+    </div>
+
+    
+    <footer>
+      <div class="container">
+        <img src="logo_white.svg" class="logo_white" alt="logo" />
+
+        <div class="flex align-start">
+          <ul>
+            <li>
+              <img
+                class="icons"
+                src="icon-location.svg"
+                alt="location"
+              />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="icon-phone.svg"
+                alt="phone_number"
+              />
+              +1-543-123-4567
+            </li>
+            <li>
+              <img class="icons" src="icon-email.svg" alt="email" />
+              example@huddle.com
+            </li>
+          </ul>
+
+          <ul>
+            <li class="about">About Us</li>
+            <li class="about_1">What We Do</li>
+            <li class="about_2">FAQ</li>
+          </ul>
+
+          <ul>
+            <li>Career</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
+
+          <ul class="social-media">
+            <li>
+              <a class="circle" href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="circle" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a class="circle" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="copy">&copy; Copyright 2018 Huddle. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+© 2022 GitHub, Inc.
